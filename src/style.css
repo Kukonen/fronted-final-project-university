@@ -1,0 +1,60 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+
+    --light-toast-success-color: rgba(145, 250, 150, 0.8);
+    --light-toast-error-color: #ef6464;
+    --light-toast-information-color: #75a8f3;
+}
+
+body {
+    margin: 0;
+}
+
+#app {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+
+#app > header {
+    grid-area: header;
+
+    /* что б не скролился )) */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    /* чтоб красивее было при скроле */
+
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+}
+  
+#app > main {
+    grid-area: main;
+    padding: 1rem;
+
+}
+  
+#app > footer {
+    grid-area: footer;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 span {
+    border-bottom: 1px solid black;
+}
+
+section {
+    width: 75%;
+    margin: auto;
+}
