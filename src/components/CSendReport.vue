@@ -21,6 +21,11 @@ onMounted(() => {
 // поэтому всё время будет ошибка...
 const send = async () => {
     if (!report.value) {
+        store.dispatch('toast/doToast', {
+            text: "Вы не ввели свой своё мнение!!!",
+            type: "ERROR"
+        });
+
         return;
     }
 
